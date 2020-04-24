@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,20 +18,20 @@
                         <viewControllerLayoutGuide type="bottom" id="L4U-e6-aeA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="THCameraView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7h-C1-yGF" customClass="THPreviewView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="L7h-C1-yGF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="3oL-Ps-ufO"/>
-                            <constraint firstItem="L7h-C1-yGF" firstAttribute="top" secondItem="ziU-IN-u04" secondAttribute="bottom" id="A8u-6s-iAm"/>
+                            <constraint firstItem="L7h-C1-yGF" firstAttribute="top" secondItem="ziU-IN-u04" secondAttribute="bottom" id="77M-f9-HLb"/>
                             <constraint firstAttribute="trailing" secondItem="L7h-C1-yGF" secondAttribute="trailing" id="Ivl-mu-iBn"/>
-                            <constraint firstItem="L4U-e6-aeA" firstAttribute="top" secondItem="L7h-C1-yGF" secondAttribute="bottom" id="pty-ep-WlT"/>
+                            <constraint firstItem="L4U-e6-aeA" firstAttribute="top" secondItem="L7h-C1-yGF" secondAttribute="bottom" id="Plg-8P-Guz"/>
                         </constraints>
                         <connections>
                             <outlet property="previewView" destination="L7h-C1-yGF" id="M8x-TL-Dtw"/>

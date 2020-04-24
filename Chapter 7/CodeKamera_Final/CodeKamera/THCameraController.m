@@ -43,8 +43,8 @@
 
             if ([self.activeCamera lockForConfiguration:error]) {
 
-                self.activeCamera.autoFocusRangeRestriction =
-                            AVCaptureAutoFocusRangeRestrictionNear;
+//                self.activeCamera.autoFocusRangeRestriction =
+//                            AVCaptureAutoFocusRangeRestrictionNear;
 
                 [self.activeCamera unlockForConfiguration];
             }
@@ -64,10 +64,10 @@
                                                   queue:mainQueue];
 
         NSArray *types = @[AVMetadataObjectTypeQRCode,                      // 1
-                           AVMetadataObjectTypeAztecCode,
-                           AVMetadataObjectTypeUPCECode];
+                           ];
 
         self.metadataOutput.metadataObjectTypes = types;
+      
 
     } else {
         NSDictionary *userInfo = @{NSLocalizedDescriptionKey:
@@ -84,9 +84,26 @@
 - (void)captureOutput:(AVCaptureOutput *)captureOutput
 didOutputMetadataObjects:(NSArray *)metadataObjects
        fromConnection:(AVCaptureConnection *)connection {
-
+    NSString *stringValue = [metadataObjects.firstObject stringValue];
     [self.codeDetectionDelegate didDetectCodes:metadataObjects];            // 2
 
+}
+
+- (void)focusAtPoint:(CGPoint)point {                                       // 2
+    AVCaptureDevice *device = [self activeCamera];
+    
+    if (device.isFocusPointOfInterestSupported &&                           // 3
+        [device isFocusModeSupported:AVCaptureFocusModeAutoFocus]) {
+        
+        NSError *error;
+        if ([device lockForConfiguration:&error]) {                         // 4
+            device.focusPointOfInterest = point;
+            device.focusMode = AVCaptureFocusModeAutoFocus;
+            [device unlockForConfiguration];
+        } else {
+            [self.delegate deviceConfigurationFailedWithError:error];
+        }
+    }
 }
 
 

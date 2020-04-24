@@ -13,8 +13,11 @@
 		0747410218A143810060A1F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0747410018A143810060A1F6 /* InfoPlist.strings */; };
 		0747410418A143810060A1F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0747410318A143810060A1F6 /* main.m */; };
 		0747410818A143810060A1F6 /* THAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0747410718A143810060A1F6 /* THAppDelegate.m */; };
-		0747410B18A143810060A1F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0747410918A143810060A1F6 /* Main.storyboard */; };
 		0747411018A143810060A1F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0747410F18A143810060A1F6 /* Images.xcassets */; };
+		4F8F693C203346A000C40F13 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F8F693B203346A000C40F13 /* Launch Screen.storyboard */; };
+		4F8F69402033483E00C40F13 /* THViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8F693F2033483E00C40F13 /* THViewController.xib */; };
+		4F8F694420334B0D00C40F13 /* THMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F694220334B0D00C40F13 /* THMainViewController.m */; };
+		4F8F694520334B0D00C40F13 /* THMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8F694320334B0D00C40F13 /* THMainViewController.xib */; };
 		C47495A918A48315001939A6 /* THCaptureButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C47495A018A48315001939A6 /* THCaptureButton.m */; };
 		C47495AA18A48315001939A6 /* THStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = C47495A218A48315001939A6 /* THStatusView.m */; };
 		C47495AB18A48315001939A6 /* THPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = C47495A418A48315001939A6 /* THPreviewView.m */; };
@@ -40,9 +43,13 @@
 		0747410518A143810060A1F6 /* CodeKamera-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeKamera-Prefix.pch"; sourceTree = "<group>"; };
 		0747410618A143810060A1F6 /* THAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THAppDelegate.h; sourceTree = "<group>"; };
 		0747410718A143810060A1F6 /* THAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THAppDelegate.m; sourceTree = "<group>"; };
-		0747410A18A143810060A1F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0747410F18A143810060A1F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0747411618A143810060A1F6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4F8F693B203346A000C40F13 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		4F8F693F2033483E00C40F13 /* THViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THViewController.xib; sourceTree = "<group>"; };
+		4F8F694120334B0D00C40F13 /* THMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THMainViewController.h; sourceTree = "<group>"; };
+		4F8F694220334B0D00C40F13 /* THMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THMainViewController.m; sourceTree = "<group>"; };
+		4F8F694320334B0D00C40F13 /* THMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THMainViewController.xib; sourceTree = "<group>"; };
 		C474959F18A48315001939A6 /* THCaptureButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THCaptureButton.h; sourceTree = "<group>"; };
 		C47495A018A48315001939A6 /* THCaptureButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THCaptureButton.m; sourceTree = "<group>"; };
 		C47495A118A48315001939A6 /* THStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THStatusView.h; sourceTree = "<group>"; };
@@ -122,7 +129,7 @@
 				C474959A18A482B7001939A6 /* Categories */,
 				0747410618A143810060A1F6 /* THAppDelegate.h */,
 				0747410718A143810060A1F6 /* THAppDelegate.m */,
-				0747410918A143810060A1F6 /* Main.storyboard */,
+				4F8F693B203346A000C40F13 /* Launch Screen.storyboard */,
 				0747410F18A143810060A1F6 /* Images.xcassets */,
 				074740FE18A143810060A1F6 /* Supporting Files */,
 			);
@@ -167,6 +174,10 @@
 			children = (
 				C47495AE18A48322001939A6 /* THViewController.h */,
 				C47495AF18A48322001939A6 /* THViewController.m */,
+				4F8F693F2033483E00C40F13 /* THViewController.xib */,
+				4F8F694120334B0D00C40F13 /* THMainViewController.h */,
+				4F8F694220334B0D00C40F13 /* THMainViewController.m */,
+				4F8F694320334B0D00C40F13 /* THMainViewController.xib */,
 				C47495B018A48322001939A6 /* THCameraController.h */,
 				C47495B118A48322001939A6 /* THCameraController.m */,
 				C47495B218A48322001939A6 /* THBaseCameraController.h */,
@@ -225,7 +236,7 @@
 				ORGANIZATIONNAME = "TapHarmonic, LLC";
 				TargetAttributes = {
 					074740F318A143810060A1F6 = {
-						DevelopmentTeam = GV36U76CUM;
+						DevelopmentTeam = Y6K7L2LFY6;
 					};
 				};
 			};
@@ -252,9 +263,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F8F69402033483E00C40F13 /* THViewController.xib in Resources */,
 				0747411018A143810060A1F6 /* Images.xcassets in Resources */,
 				0747410218A143810060A1F6 /* InfoPlist.strings in Resources */,
-				0747410B18A143810060A1F6 /* Main.storyboard in Resources */,
+				4F8F694520334B0D00C40F13 /* THMainViewController.xib in Resources */,
+				4F8F693C203346A000C40F13 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F8F694420334B0D00C40F13 /* THMainViewController.m in Sources */,
 				C47495B618A48322001939A6 /* THViewController.m in Sources */,
 				C47495AB18A48315001939A6 /* THPreviewView.m in Sources */,
 				C47495C018A4832E001939A6 /* NSTimer+Additions.m in Sources */,
@@ -291,14 +305,6 @@
 				0747410118A143810060A1F6 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0747410918A143810060A1F6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0747410A18A143810060A1F6 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -379,9 +385,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y6K7L2LFY6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeKamera/CodeKamera-Prefix.pch";
 				INFOPLIST_FILE = "CodeKamera/CodeKamera-Info.plist";
@@ -396,9 +402,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y6K7L2LFY6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CodeKamera/CodeKamera-Prefix.pch";
 				INFOPLIST_FILE = "CodeKamera/CodeKamera-Info.plist";

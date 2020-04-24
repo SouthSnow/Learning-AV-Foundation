@@ -63,6 +63,10 @@
 
 - (void)setSession:(AVCaptureSession *)session {
     self.previewLayer.session = session;
+    dispatch_async(dispatch_get_main_queue(), ^{
+//       ((AVCaptureMetadataOutput*)session.outputs.firstObject).rectOfInterest = [(AVCaptureVideoPreviewLayer*)self.previewLayer metadataOutputRectOfInterestForRect:CGRectInset(CGRectMake(375/2-150/2, 200, 150, 200), -30, -30)];
+        
+    });
 }
 
 - (AVCaptureVideoPreviewLayer *)previewLayer {
